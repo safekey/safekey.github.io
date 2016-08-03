@@ -293,8 +293,7 @@
 <footer id="footer" class="wrapper style1-alt">
     <div class="inner">
         <ul class="menu">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Safekey. All rights reserved.</li>
         </ul>
     </div>
 </footer>
@@ -309,5 +308,24 @@
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
+<script>
+    $(function(){
+        $.each(document.images, function(){
+            var this_image = this;
+            var src = $(this_image).attr('src') || '' ;
+            if(!src.length > 0){
+                //this_image.src = options.loading; // show loading
+                var lsrc = $(this_image).attr('lsrc') || '' ;
+                if(lsrc.length > 0){
+                    var img = new Image();
+                    img.src = lsrc;
+                    $(img).load(function() {
+                        this_image.src = this.src;
+                    });
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
