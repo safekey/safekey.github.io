@@ -28,7 +28,7 @@
                 <li><a href="#problem">Problem</a></li>
                 <li><a href="#solution">Solution</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Become a Hero</a></li>
+                <li><a href="#contact">Protect Our Future</a></li>
             </ul>
         </nav>
     </div>
@@ -230,14 +230,34 @@
             </div>
         </section>
     </section>
+    <section id="professors" class="wrapper fade-up">
+        <div class="inner">
+            <h2>Backed by leading professors</h2>
+            <div class="features">
+                <section>
+                    <h3><span class="image left"><img src="images/XXXXX.jpg" alt="XXXXX"/></span>Dr. XXXXX</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris,
+                        sed ultricies erat dapibus.</p>
+                    <a href="#" class="button small" target="_blank">Learn more about Dr. XXXXX</a>
+                </section>
+                <section>
+                    <h3><span class="image left"><img src="images/XXXXX.jpg" alt="XXXXX"/></span>Dr. XXXXX</h3>
+                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris,
+                        sed ultricies erat dapibus.</p>
+                    <a href="#" class="button small" target="_blank">Learn more about Dr. XXXXX</a>
+                </section>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="wrapper style1 fade-up">
         <div class="inner">
-            <h2>Get in touch, join us, become a hero</h2>
+            <h2>Join us, help protect our future</h2>
             <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris,
                 eu ultricies erat malesuada quis</p>
 
-            <h3>Submit your email so we can bring Safekey and safety to your school!</h3>
+            <h3>Submit your email so we can bring Safekey to your school!</h3>
             <div class="split style1">
                 <section>
                     <form method="post" action="#">
@@ -294,7 +314,7 @@
         </div>
         <div class="inner">
             <h2>Invest in Safekey</h2>
-            <p>Read our investor's guide <a href="">here</a> </p>
+            <p>Read our investor's guide <a href="">here</a></p>
             <p></p>
             <div class="split style1">
                 <section>
@@ -362,17 +382,17 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-    $(function(){
-        $.each(document.images, function(){
+    $(function () {
+        $.each(document.images, function () {
             var this_image = this;
-            var src = $(this_image).attr('src') || '' ;
-            if(!src.length > 0){
+            var src = $(this_image).attr('src') || '';
+            if (!src.length > 0) {
                 //this_image.src = options.loading; // show loading
-                var lsrc = $(this_image).attr('lsrc') || '' ;
-                if(lsrc.length > 0){
+                var lsrc = $(this_image).attr('lsrc') || '';
+                if (lsrc.length > 0) {
                     var img = new Image();
                     img.src = lsrc;
-                    $(img).load(function() {
+                    $(img).load(function () {
                         this_image.src = this.src;
                     });
                 }
